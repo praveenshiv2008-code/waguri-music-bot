@@ -1,8 +1,8 @@
 import os
 
 API_ID = int(os.getenv("API_ID", "33024906"))
-API_HASH = os.getenv("API_HASH", "186ccd86463624521cffc814f8e0fe82")
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+API_HASH = int(os.getenv("API_HASH", "186ccd86463624521cffc814f8e0fe82"))
+BOT_TOKEN = int(os.getenv("BOT_TOKEN"),"8642173946:AAHzpqSbk7GANqngcATmToSQ6stMTmMLP70"))
 SESSION_STRING = os.getenv("ASSISTANT_SESSION") or os.getenv("STRING_SESSION")
 MAIN_OWNER = int(os.getenv("OWNER_ID", "7195555305"))
 DEPLOYED_OWNER_ID = int(os.getenv("OWNER_ID", "7195555305"))
