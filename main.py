@@ -23,9 +23,12 @@ logger = logging.getLogger(__name__)
 DOWNLOAD_DIR = "/tmp/downloads"
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
+COOKIES_FILE = "/tmp/youtube_cookies.txt"
+
 if YOUTUBE_COOKIES:
     with open(COOKIES_FILE, "w", encoding="utf-8") as _cf:
         _cf.write(YOUTUBE_COOKIES)
+    logger.info(f"Cookies written to {COOKIES_FILE}")
     logger.info(f"Cookies written to {COOKIES_FILE} from YOUTUBE_COOKIES env")
 
 
