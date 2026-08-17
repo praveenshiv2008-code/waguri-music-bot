@@ -20,8 +20,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-if not os.path.exists("downloads"):
-    os.makedirs("downloads")
+DOWNLOAD_DIR = "/tmp/downloads"
+os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
 if YOUTUBE_COOKIES:
     with open(COOKIES_FILE, "w", encoding="utf-8") as _cf:
